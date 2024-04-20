@@ -8,38 +8,45 @@
 </head>
 <body>
     <h1 id="title">Health Survey in Kampala Uganda</h1>
-    <p class="description"></p>
+    <p class="description">This form is used to get informtion on healths of the people in Kampala</p>
     <form action="" id="survey-form">
-        <label id="name-label" for="">Name<input placeholder="Enter your names" type="text" id="name" required/></label>
-        <label id="email-label" for="">Email<input placeholder="Enter your Email address" type="email" id="email" required/></label>
-        <label id="number-label" for="">Telephone <input placeholder="Enter your number" type="number" id="number" max="10" min="5"></label>
-        <label for="">Which Health complication do you have?
-            <select name="" id="dropdown">
-                <option value="">HIV/AIDS</option>
-                <option value="">Malaria</option>
-                <option value="">Obesity</option>
+
+        <fieldset>
+            <label  for="name-label">Name<input id="name-label" name="name-label" placeholder="Enter your names" type="text" id="name" required/></label>
+            <label  for="email-label">Email<input id="email-label" name="email-label" placeholder="Enter your Email address" type="email" id="email" required/></label>
+            <label  for="number-label">Telephone <input id="number-label" name="number-label" placeholder="Enter your number" type="number" id="number" max="10" min="5"></label>
+            <label for="dropdown">Which Health complication do you have?
+            <select name="dropdown" id="dropdown">
+                <option value="" selected>Select one</option>
+                <option value="1">HIV/AIDS</option>
+                <option value="2">Malaria</option>
+                <option value="3">Obesity</option>
             </select>
         </label>
-        <p>Would you recommend one to do reguar checkups?</p>
-        <label>Yes i would<input type="radio" name="yes" checked></label>
-        <label >No i won't<input type="radio" name="no"></label>
-        <label >May be<input type="radio" name="maybe"></label>  
-        
-        <p>How often do you eat out in a week? (Check all that apply)
-            </p>
-        <label >Always <input type="checkbox"></label>
-        <label >Sometimes <input type="checkbox"></label>
-        <label >Rarely <input type="checkbox"></label>
-        <label >Never <input type="checkbox"></label>
-        <label >Usually <input type="checkbox"></label>
-        <label >When i want <input type="checkbox"></label>
-        <label >Other <input type="checkbox"></label>
+        <!--u give the same name for these elow to make selection of one deselect the other-->
+        <legend>Would you recommend one to do reguar checkups?</legend>
+        <label for="yes">Yes i would<input id="yes" type="radio" name="yes" checked></label>
+        <label for="no">No i won't<input id="no" type="radio" name="yes"></label>
+        <label for="maybe">May be<input id="maybe" type="radio" name="yes"></label>
+        </fieldset>
 
-        <label for="">How is the quality of your sleep?
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+    <fieldset>
+        <legend>How often do you eat out in a week? (Check all that apply)</legend>
+        <label for="Always">Always <input id="Always"type="checkbox" name="Always"></label>
+        <label for="Sometimes">Sometimes <input id="Sometimes"type="checkbox" name="Sometimes"></label>
+        <label for="Rarely">Rarely <input id="Rarely" type="checkbox"></label>
+        <label for="Never">Never <input id="Never" type="checkbox" name="Never"></label>
+        <label for="Usually">Usually <input id="Usually" type="checkbox" name="Usually"></label>
+        <label for="When">When i want <input id="When" type="checkbox" name="When"></label>
+        <label for="Other">Other <input id="Other" type="checkbox" name="Other"></label>
+        <!--text area-->
+        <label for="textarea">How is the quality of your sleep?
+            <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Enter the sleep quality here..."></textarea>
         </label>
-        <button id="Submit">Submit</button>
-        
+        <button type="submit" id="Submit">Submit</button>
+    </fieldset>
+
+                
 
     </form>
     <script src="script.js"></script>
