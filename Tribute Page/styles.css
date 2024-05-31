@@ -4,9 +4,15 @@ body{
     color: white;
 }
 #image{
+    align-items: center;
     max-width: 600px;
     height: 80vh;
 }
-img{
+
+a{
+    color: rgb(248, 4, 4);
+}
+
+#main h3{
     align-items: center;
 }
